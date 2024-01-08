@@ -1,0 +1,39 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h2>Student Information</h2>
+    <form method="post" action="/Home/SubmitData">
+        <div>
+            <label>Name:</label>
+            <input type="text" name="Name" required />
+        </div>
+        <div>
+            <label>Roll No:</label>
+            <input type="number" name="RollNo" required />
+        </div>
+        <div>
+            <label>Address:</label>
+            <input type="text" name="Address" required />
+        </div>
+        <div>
+            <label>Age:</label>
+            <input type="number" name="Age" required />
+        </div>
+        <div>
+            <button type="submit">Submit Data</button>
+        </div>
+    </form>
+    <br>
+
+    <form method="get" action="/Home/BindDataToPDF">
+        <div>
+            <button type="submit">Bind</button>
+        </div>
+    </form>
+
+    <div>
+        @TempData["Message"]
+    </div>
+</div>
